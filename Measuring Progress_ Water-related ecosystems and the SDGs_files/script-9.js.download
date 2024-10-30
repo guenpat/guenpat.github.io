@@ -1,0 +1,71 @@
+Highcharts.chart('chartdiv-2-8', {
+  colors: ['#0072BC','#579ac5',  '#8bc2e5', '#dceed8', '#F99F25',
+  '#DD1768', '#03699D', '#1A496B', '#F36A2C'],
+  chart: {
+    type: 'column',
+    backgroundColor: '#eff2f8',
+  },
+ 
+	credits: {
+      enabled: false
+    },
+
+  title: {
+    text: 'SDG 8'
+  },
+  subtitle: {
+    text: null
+  },
+  xAxis: {
+    categories: [
+      '2018',
+      '2020',
+      '2022',
+    ],
+  },
+  caption: {
+        text: null
+    },
+	
+  yAxis: {
+    max: 100,
+    visible: false,
+  },
+  legend: {
+    enabled: false
+  },
+  tooltip: {
+    headerFormat: '<span style="font-size:10px">{point.key}</span><br>',
+    pointFormat: '<span style="padding:1">{series.name}: </span>' +
+      '<span style="padding:1"><b>{point.y}%</b></span><br>',  
+    shared: true,
+    useHTML: true
+  },
+  plotOptions: {
+    column: {
+      stacking: 'normal',
+      dataLabels: {
+        enabled: true,
+		    format: '{y}%',
+        style: {
+          textOutline: 'none' 
+      },
+      }
+    }
+  },
+
+  exporting: {
+    enabled: false
+  },
+
+  series: [{
+    name: 'Positive trend',
+    data: ['',	'',	50]
+  }, {
+    name: 'Little change or a negative trend',
+    data: [100,	100,	50]
+  },{
+    name: 'No data or insufficient data',
+    data: ['',	'',	'']
+  }, ]
+});

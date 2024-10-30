@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Revalia");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+.slide {
+  opacity: 0;
+  position: relative;
+  
+  display: inline-block;
+  -webkit-transition: all 500ms linear;
+  -moz-transition: all 500ms linear;
+  -o-transition: all 500ms linear;
+  transition: all 500ms linear;
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+
+}
+
+.slide--left {
+  transform: translate(-10rem, 0);
+}
+
+.slide--right {
+  transform: translate(10rem, 0rem);
+}
+
+.slide--bottom {
+  transform: translate(0rem, 2rem);
+}
+
+.slide--in-view {
+  opacity: 1;
+}
+
+.slide--in-view:nth-of-type(even) {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.slide--in-view:nth-of-type(odd) {
+  opacity: 1;
+  transform: translate(0, 0);
+}

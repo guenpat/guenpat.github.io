@@ -1,0 +1,49 @@
+/*—- DIVI TIMELINE / DOTS LIST —–*/
+.dots-list {
+  width: 100%;
+}
+.dots-list ol {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 20px;
+  list-style: none !important;
+}
+.dots-list ol li {
+  position: relative;
+  margin-top: 0em;
+  margin-bottom: 20px;
+}
+.dots-list ol li .date {
+  position: absolute;
+  left: -215px;
+  font-weight: bold;
+  font-size: 1em;
+  top: -1px;
+}
+.dots-list ol li:before {
+  content: "";
+  background: #0063AF;
+  /*edit line colour*/
+  position: absolute;
+  width: 2px;
+  top: 5px;
+  bottom: -25px;
+  left: -26px;
+}
+.dots-list ol li:after {
+  content: "";
+  background: #0063AF;
+  /*edit circle colour*/
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  border: 2px solid #0063AF;
+  /*edit circle border colour*/
+  top: 5px;
+  left: -31px;
+}
+.dots-list ol li:last-child:before {
+  content: "";
+  background: rgba(0, 0, 0, 0);
+}

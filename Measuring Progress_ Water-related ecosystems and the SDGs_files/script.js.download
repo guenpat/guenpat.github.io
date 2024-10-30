@@ -1,0 +1,316 @@
+$(document).ready(function () {
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: "es" },
+      "google_translate_element"
+    );
+  }
+
+  var accessibilityTrigger = $("#accessibilityTrigger");
+  var accessibilitySidebar = $("#accessibilitySidebar");
+  var grayScale = $("#accessibilityGrayscale");
+  var contrast = $("#accessibilityContrast");
+	var huerotate = $("#accessibilityHuerotate");
+	var huerotate2 = $("#accessibilityHuerotate2");
+	var huerotate3 = $("#accessibilityHuerotate3");
+  var accessibilityInvert = $("#accessibilityInvert");
+      var accessibilityInverthue = $("#accessibilityInverthue");
+  var accessibilityDefault = $("#accessibilityDefault");
+  var accessibilityHideImages = $("#accessibilityHideImages");
+
+
+	
+	
+  accessibilityTrigger.bind("click", function (e) {
+    e.preventDefault();
+    var clientWidth =
+      document.documentElement.clientWidth || document.body.clientWidth;
+    $("body").css("width", "calc(" + clientWidth + "px - 0em)");
+    accessibilityTrigger.fadeOut();
+    accessibilitySidebar.addClass("visible");
+    $("body").addClass("adjusted");
+    return false;
+  });
+
+  grayScale.bind("click", function (e) {
+    if ($("body").hasClass("invert")) {
+      invertColors();
+    }
+    $("body").addClass("grayscale");
+    $("body").removeClass("contrast invert");
+  });
+    
+  contrast.bind("click", function (e) {
+    if ($("body").hasClass("invert")) {
+      invertColors();
+    }
+    $("body").addClass("contrast");
+    $("body").removeClass("grayscale invert");
+  });
+	
+	huerotate.bind("click", function (e) {
+		if ($("body").hasClass("invert")) {
+		  invertColors();
+		}
+		$("body").addClass("huerotate");
+		$("body").removeClass(" grayscale invert huerotate2 huerotate3");
+	  });
+	
+		huerotate2.bind("click", function (e) {
+		if ($("body").hasClass("invert")) {
+		  invertColors();
+		}
+		$("body").addClass("huerotate2");
+		$("body").removeClass(" grayscale invert huerotate huerotate3");
+	  });
+	
+	huerotate3.bind("click", function (e) {
+		if ($("body").hasClass("invert")) {
+		  invertColors();
+		}
+		$("body").addClass("huerotate3");
+		$("body").removeClass(" grayscale invert huerotate huerotate2 ");
+	  });
+	
+ //m-Start-invert	
+    //ADD m-container for the inverted filter; 
+  accessibilityInvert.bind("click", function (e) {
+    if (!$("body").hasClass("invert")) {
+      invertColors();
+    }
+    $("#m-container").addClass("invert");
+    $("body").removeClass("contrast");
+    invertColors();
+  });
+	 //than to remove it when accessing other filters.
+  accessibilityDefault.bind("click", function (e) {
+    if ($("#m-container").hasClass("invert")) {
+      invertColors();
+    }
+    $("#m-container").removeClass("contrast grayscale invert");
+  });
+//m-end-invert		
+
+
+			
+	
+  accessibilityDefault.bind("click", function (e) {
+    if ($("body").hasClass("invert")) {
+      invertColors();
+    }
+    $("body").removeClass("contrast grayscale huerotate huerotate2 huerotate3");
+  });	
+	
+	
+	
+	
+	
+	
+  accessibilityHideImages.bind("click", function (e) {
+    $("img").each(function () {
+      $(this).toggleClass("accessibilityHideImage");
+    });
+  });
+
+  accessibilitySidebar.bind("click", function (e) {
+    e.stopPropagation();
+  });
+
+  $(document).bind("click", function (e) {
+    $("#accessibilitySidebar").removeClass("visible");
+    $("body").removeClass("adjusted");
+    accessibilityTrigger.fadeIn();
+    setTimeout(function () {
+      $("body").css("width", "auto");
+    }, 1000);
+  });
+
+    
+
+
+    
+  $("body *:not(#accessibilityAssist)").each(function () {
+    if ($(this).parents("#accessibilityAssist").length == 1) return;
+    var originalFontSize = $(this).css("font-size");
+    $(this).data("fontSize", originalFontSize);
+  });
+
+  $("#resettext").bind("click", function () {
+    $("body *:not(.accessibilityAssist)").each(function () {
+      if ($(this).parents("#accessibilityAssist").length == 1) return;
+      var resetSize = $(this).data("fontSize");
+      var originalFontSize = $(this).css("font-size", resetSize);
+    });
+  });
+
+  $("#increasetext").bind("click", function () {
+    $("body *:not(.accessibilityAssist)").each(function () {
+      if ($(this).parents("#accessibilityAssist").length == 1) return;
+      var originalFontSize = $(this).css("font-size");
+      var originalFontNumber = parseFloat(originalFontSize, 10);
+      var newFontSize = originalFontNumber * 1.1;
+      $(this).css("font-size", newFontSize);
+    });
+    return false;
+  });
+
+  $("#decreasetext").bind("click", function () {
+    $("body *:not(.accessibilityAssist)").each(function () {
+      if ($(this).parents("#accessibilityAssist").length == 1) return;
+      var originalFontSize = $(this).css("font-size");
+      var originalFontNumber = parseFloat(originalFontSize, 10);
+      var newFontSize = originalFontNumber * 0.9;
+      $(this).css("font-size", newFontSize);
+    });
+    return false;
+  });
+});
+
+
+
+function invertColors() {
+  //set up color properties to iterate through
+  var colorProperties = ["background-color"];
+
+  //iterate through every element
+  $("body").each(function () {
+    var color = null;
+
+    for (var prop in colorProperties) {
+      prop = colorProperties[prop];
+
+      //if we can't find this property or it's null, continue
+      if (!$(this).css(prop)) continue;
+
+      //create RGBColor object
+      color = new RGBColor($(this).css(prop));
+
+      if (color.ok) {
+        //good to go, let's build up this RGB baby!
+        //subtract each color component from 255
+        $(this).css(
+          prop,
+          "rgb(" +
+            (255 - color.r) +
+            ", " +
+            (255 - color.g) +
+            ", " +
+            (255 - color.b) +
+            ")"
+        );
+      }
+      color = null; //some cleanup
+    }
+  });
+}
+
+(function () {
+  "use strict";
+
+  if (typeof speechSynthesis === "undefined") return;
+
+  var accessibilityVoiceSelect = document.getElementById(
+    "accessibilityVoiceSelect"
+  );
+  var myPhrase = "Text to Speech Enabled!";
+  var voices = [];
+
+  var ready = function (callback) {
+    var d = document,
+      s = d.readyState;
+
+    if (s == "complete" || s == "loaded" || s == "interactive") {
+      callback();
+    } else {
+      if (d.addEventListener) {
+        d.addEventListener("DOMContentLoaded", callback, false);
+      } else {
+        d.attachEvent("onDOMContentLoaded", callback);
+      }
+    }
+  };
+
+  function populateVoiceList() {
+    voices = speechSynthesis.getVoices();
+
+    for (var i = 0; i < voices.length; i++) {
+      var option = document.createElement("option");
+      option.textContent = voices[i].name + " (" + voices[i].lang + ")";
+      option.textContent += voices[i].default ? " -- DEFAULT" : "";
+      option.setAttribute("data-lang", voices[i].lang);
+      option.setAttribute("data-name", voices[i].name);
+      document.getElementById("accessibilityVoiceSelect").appendChild(option);
+    }
+  }
+
+  function handler() {
+    var utterThis = new SpeechSynthesisUtterance(myPhrase);
+    var selectedOption = accessibilityVoiceSelect.selectedOptions[0].getAttribute(
+      "data-name"
+    );
+
+    for (var i = 0; i < voices.length; i++) {
+      if (voices[i].name === selectedOption) {
+        utterThis.voice = voices[i];
+      }
+    }
+
+    speechSynthesis.speak(utterThis);
+  }
+
+  function TTSenabled() {
+    var utterThis = new SpeechSynthesisUtterance("Text to Speech Enabled!");
+    var selectedOption = accessibilityVoiceSelect.selectedOptions[0].getAttribute(
+      "data-name"
+    );
+
+    for (var i = 0; i < voices.length; i++) {
+      if (voices[i].name === selectedOption) {
+        utterThis.voice = voices[i];
+      }
+    }
+
+    speechSynthesis.speak(utterThis);
+  }
+
+  $("#accessibilityTTS").bind("click", function (e) {
+    TTSenabled();
+    var voiceSelect = $("#accessibilityVoiceSelect");
+    if (voiceSelect.prop("disabled")) {
+      voiceSelect.prop("disabled", false);
+    } else {
+      voiceSelect.prop("disabled", true);
+    }
+  });
+
+  function getSelectionText() {
+    var text = "";
+    if (window.getSelection) {
+      text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+      text = document.selection.createRange().text;
+    }
+    return text;
+  }
+
+  document.onmouseup = function (e) {
+    if ($("#accessibilityTTS").is(":checked")) {
+      setTimeout(function () {
+        speechSynthesis.cancel();
+        myPhrase = getSelectionText();
+        handler();
+      }, 1);
+    }
+  };
+
+  function start() {
+    populateVoiceList();
+    if (speechSynthesis.onvoiceschanged !== undefined)
+      speechSynthesis.onvoiceschanged = populateVoiceList;
+
+    accessibilityVoiceSelect.onchange = handler;
+    //setTimeout(handler, 75);
+  }
+
+  ready(start);
+})();

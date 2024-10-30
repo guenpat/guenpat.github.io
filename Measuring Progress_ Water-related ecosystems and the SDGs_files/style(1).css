@@ -1,0 +1,359 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+/* Override UGG site */
+#main {width: 100%; padding:0;}
+.content-asset p {margin:0 auto;}
+.breadcrumb {display:none;}
+
+/* Helpers */
+/**************************/
+.margin-top-10 {padding-top:10px;}
+.margin-bot-10 {padding-bottom:10px;}
+
+/* Typography */
+/**************************/
+#m-parallax h1 {  font-family: soleil, "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ font-size:24px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}
+#m-parallax h2 {  font-family: soleil, "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ sans-serif; font-size:2.2rem!important; letter-spacing:0px; text-align:center!important; line-height: 55px !important; color:#FFFFFF; font-weight:900; text-transform:uppercase!important; z-index:10; opacity:.9; text-shadow: 0px 0px #727272;padding: 20px;}
+#m-parallax h3 {  font-family: soleil, "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ font-size:18px; line-height:0; font-weight:400; letter-spacing:0px; text-align:center!important; text-transform: uppercase; color:#FFFFFF;}
+#m-parallax p {  font-family: soleil, "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ font-weight:400; font-size:14px; line-height:24px;}
+.first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
+
+.sc {color: #3b8595;}
+.ny {color: #3d3c3a;}
+.atw {color: #c48660;}
+
+/* Section - Title */
+/**************************/
+#m-parallax .title {background: white; padding: 60px; margin:0 auto; text-align:center;}
+#m-parallax .title h1 {font-size:35px; letter-spacing:4px;}
+
+/* Section - Block */
+/**************************/
+#m-parallax .block {background: white; padding: 60px; width:820px; margin:0 auto; text-align:justify;}
+#m-parallax .block-gray {background: #f2f2f2;padding: 60px;}
+#m-parallax .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
+
+/* Section - Parallax */
+/**************************/
+#m-parallax .parallax-one {padding-top: 200px; padding-bottom: 150px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/chapter-1.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center; 
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-two {padding-top: 200px; padding-bottom: 150px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/chapter-2.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-three {padding-top: 200px; padding-bottom: 150px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/chapter-3.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-four {padding-top: 200px; padding-bottom: 150px; overflow: hidden; position: relative; width: 100%;background-image: url("../backgrounds/chapter-4.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;  
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-five {padding-top: 200px; padding-bottom: 150px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/chapter-5.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-six {padding-top: 200px; padding-bottom: 150px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/chapter-6.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center; /*background-color: #4C4C4C;*/
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-seven {padding-top: 200px; padding-bottom: 150px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/chapter-7.jpg");
+	background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center; /*background-color: #58595B;*/
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-eight {padding-top: 100px; padding-bottom: 50px; overflow: hidden; position: relative; width: 100%; /*background-image: url("../backgrounds/photos/chapter-8.jpg");*/ background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center; background-color: #8c9638;
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-nine {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/photos/chapter-9.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-ten {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/photos/chapter-10.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-eleven {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/photos/chapter-11.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-twelve {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/photos/chapter-12.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-thirteen {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/photos/chapter-13.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-fourteen {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/photos/chapter-rec.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;
+
+	-webkit-animation: slidein 35s;
+        animation: slidein 35s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; 
+}
+
+#m-parallax .parallax-fifteen {padding-top: 100px; padding-bottom: 100px; overflow: hidden; position: relative; width: 100%; background-image: url("../backgrounds/photos/chapter-14.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+
+/* Extras */
+/**************************/
+#m-parallax .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
+
+/* Media Queries */
+/**************************/
+@media screen and (max-width: 959px) and (min-width: 768px) {
+  #m-parallax .block {padding: 40px; width:620px;}
+}
+@media screen and (max-width: 767px) {
+  #m-parallax .block {padding: 30px; width:420px;}
+  #m-parallax h2 {font-size:30px!important; line-height: 35px!important;}
+  #m-parallax h3 {font-size:25px!important; line-height: 35px!important;}
+  #m-parallax .block {padding: 30px;}
+  #m-parallax .parallax-one, #m-parallax .parallax-two, #m-parallax .parallax-three, #m-parallax .parallax-four, #m-parallax .parallax-five, #m-parallax .parallax-six, #m-parallax .parallax-seven, #m-parallax .parallax-eight {padding-top:100px; padding-bottom:100px;}
+}
+@media screen and (max-width: 479px) {
+  #m-parallax .block {padding: 30px 15px; width:290px;}
+  #m-parallax h2 {font-size:18px!important; line-height: 20px!important;}
+  #m-parallax h3 {font-size:16px!important; line-height: 20px!important;}
+  #m-parallax .parallax-one, #m-parallax .parallax-two, #m-parallax .parallax-three, #m-parallax .parallax-four, #m-parallax .parallax-five, #m-parallax .parallax-six, #m-parallax .parallax-seven, #m-parallax .parallax-eight {padding-top:50px; padding-bottom:50px;}
+
+  #m-parallax .parallax-one {padding-top: 100px; padding-bottom: 150px; 
+       
+        background-image: url("../backgrounds/chapter-1-mobile.jpg"); 
+        -webkit-animation: none;
+        animation: none;
+        background-attachment: initial;
+
+}
+
+#m-parallax .parallax-two {padding-top: 100px; padding-bottom: 150px; 
+       
+        background-image: url("../backgrounds/chapter-2-mobile.jpg"); 
+        -webkit-animation: none;
+        animation: none;
+        background-attachment: initial;
+
+}
+
+#m-parallax .parallax-three {padding-top: 100px; padding-bottom: 150px; 
+       
+        background-image: url("../backgrounds/chapter-3-mobile.jpg"); 
+        -webkit-animation: none;
+        animation: none;
+        background-attachment: initial;
+
+}
+
+#m-parallax .parallax-four {padding-top: 100px; padding-bottom: 150px; 
+       
+        background-image: url("../backgrounds/chapter-4-mobile.jpg"); 
+        -webkit-animation: none;
+        animation: none;
+        background-attachment: initial;
+
+}
+
+#m-parallax .parallax-five {padding-top: 100px; padding-bottom: 150px; 
+       
+        background-image: url("../backgrounds/chapter-5-mobile.jpg"); 
+        -webkit-animation: none;
+        animation: none;
+        background-attachment: initial;
+
+}
+
+#m-parallax .parallax-six {padding-top: 100px; padding-bottom: 150px; 
+       
+        background-image: url("../backgrounds/chapter-6-mobile.jpg"); 
+        -webkit-animation: none;
+        animation: none;
+        background-attachment: initial;
+
+}
+
+#m-parallax .parallax-seven {padding-top: 100px; padding-bottom: 150px; 
+       
+        background-image: url("../backgrounds/chapter-7-mobile.jpg"); 
+        -webkit-animation: none;
+        animation: none;
+        background-attachment: initial;
+
+}
+
+
+}
+
+@-webkit-keyframes slidein {
+from {background-position: center center;background-size:140% 140%; }
+to {background-position: -100px; background-size:140% 140%;}
+}
+
+@keyframes slidein {
+from {background-position: center center;background-size:140% 140%; }
+to {background-position: -100px; background-size:140% 140%;}
